@@ -1,0 +1,25 @@
+name: fluttone
+description: Simple sequencer.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_resonance_audio: ^0.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+   - sound/note1.ogg
+   - sound/note2.ogg
+   - sound/note3.ogg
+   - sound/note4.ogg
+   - sound/note5.ogg
