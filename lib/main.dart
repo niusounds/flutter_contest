@@ -12,6 +12,7 @@ String assetForNote(int n) => 'sound/note$n.ogg';
 final audioEngine = FlutterResonanceAudio();
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await audioEngine.init(renderingMode: RenderingMode.STEREO_PANNING);
 
   for (int i = 1; i <= 5; i++) {
@@ -193,6 +194,8 @@ class _BoxState extends State<Box> {
   }
 
   Color get _color => widget.enable
-      ? widget.noteOn ? Colors.yellowAccent : Colors.green
+      ? widget.noteOn
+          ? Colors.yellowAccent
+          : Colors.green
       : Colors.white;
 }
